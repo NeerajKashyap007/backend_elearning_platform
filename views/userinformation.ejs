@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information</title>
+    <style>
+        
+        .profile-pic {
+            width: 150px; 
+            height: auto; 
+            border-radius: 50%; /* Make it circular */
+        }
+    </style>
+</head>
+<body>
+    <h1>User Information</h1>
+    
+    <img class="profile-pic" src="<%= profilePicUrl %>" alt="Profile Picture">
+    <p>Name: <%= user.name %></p>
+    <p>Email: <%= user.email %></p>
+    <h2>Enrolled Courses:</h2>
+    <ul>
+        <% courses.forEach(course => { %>
+            <li><%= course.title %></li>
+        <% }); %>
+    </ul>
+</body>
+</html>
