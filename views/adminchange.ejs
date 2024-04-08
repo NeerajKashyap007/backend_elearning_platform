@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        form {
+            width: 200px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        input[type="submit"] {
+            width: 150px;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        form + form {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="/newcourse">
+        <input type="submit" value="Add Course">
+    </form>
+    <form method="post" action="/delcourse">
+        <input type="submit" value="Delete Course">
+    </form>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 50px;
+        }
+        form {
+            width: 300px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        input[type="submit"] {
+            width: 150px;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        pre {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        pre span {
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="number"] {
+            width: 200px;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <p>You are logged out</p>
+    <form method="post" action="/check">
+        <input type="submit" value="Logout">
+    </form>
+    <pre>
+        The available courses are:
+        <span>1. Introduction to Programming. Course ID: 1</span>
+        <span>2. Web Development Fundamentals. Course ID: 2</span>
+        <span>3. Data Science Essentials. Course ID: 3</span>
+
+        Please enter your email and course ID below to register for a course.
+    </pre>
+    <form action="/enroll" method="post">
+        <input type="text" placeholder="Email" name="email">
+        <br>
+        <input type="number" placeholder="Course ID" name="course_id">
+        <br>
+        <input type="submit" value="Enroll">
+    </form>
+
+    <form method="get" action="/userinfo">
+        <input type="submit" value="Your Info">
+    </form>
+</body>
+</html>
